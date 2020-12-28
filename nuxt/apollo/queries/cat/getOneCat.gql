@@ -1,0 +1,7 @@
+query getOneCat($id: String!) {
+	getOneCat(id: $id) {
+		id
+		name
+		age
+	}
+}

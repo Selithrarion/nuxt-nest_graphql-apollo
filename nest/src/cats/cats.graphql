@@ -1,0 +1,17 @@
+scalar Date
+
+type Cat {
+	id: String!
+	name: String!
+	age: Int!
+}
+
+type Query {
+	getAllCats: [Cat]
+	getOneCat(id: String!): Cat
+}
+
+type Mutation {
+	createCat(id: String!, name: String!, age: Int!): Cat
+	updateCat(id: String!, name: String!, age: Int!): Cat
+}

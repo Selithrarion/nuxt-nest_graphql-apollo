@@ -1,0 +1,7 @@
+mutation createCat($name: String!, $age: Int!, $id: String!) {
+	createCat(name: $name, age: $age, id: $id) {
+		id
+		name
+		age
+	}
+}

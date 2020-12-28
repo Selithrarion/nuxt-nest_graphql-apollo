@@ -1,0 +1,7 @@
+mutation updateCat($name: String!, $age: Int!, $id: String!) {
+  updateCat(name: $name, age: $age, id: $id) {
+    id
+    name
+    age
+  }
+}
