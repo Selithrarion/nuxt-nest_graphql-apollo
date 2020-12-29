@@ -57,6 +57,13 @@ export default {
 			],
 		};
 	},
+  watch: {
+	  cat() {
+        this.name = this.cat.name;
+      	this.age = this.cat.age;
+      	this.id = this.cat.id;
+    }
+  },
   computed: {
 	  areAnyChanges() {
 	    if (this.cat.name === this.name && this.cat.age === this.age) return false
@@ -96,13 +103,13 @@ export default {
 			}
 		},
 	},
-	// mounted() {
-	//   // не работает. приходят undefined данные, не знаю как починить :3
-  //   console.log(this.cat.name)
-  //   this.name = this.cat.name;
-	// 	this.age = this.cat.age;
-	// 	this.id = this.cat.id;
-	// },
+  mounted() {
+	  if (this.cat) {
+      this.name = this.cat.name;
+      this.age = this.cat.age;
+      this.id = this.cat.id;
+    }
+  }
 };
 </script>
 
